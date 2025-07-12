@@ -15,4 +15,5 @@ jobs:
           sudo apt-get update
           sudo apt-get install  curl jq  vboot-utils u-boot-tools vbutil_kernel cgpt mkimage build-essential -y
       - name: Launch kernel build for Krane
+        run: |
           sudo ./install /dev/sdb -build -debian -krane
