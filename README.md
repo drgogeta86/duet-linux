@@ -7,6 +7,8 @@ As it stands, currently a Gentoo, Alpine, and Debian install all work (Couple of
 
 Build info: ``./install /dev/sdX -buildoption -rootfs -device``
 
+./install /dev/sdb -nobuild -debian -krane
+
 Build options are: build (Builds kernel, or rebuilds) or nobuild
 Rootfs options are: Alpine, Gentoo, Debian
 Device options are: Nyan, Krane

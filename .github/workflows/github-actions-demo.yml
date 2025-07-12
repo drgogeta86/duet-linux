@@ -9,5 +9,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Install jq tool
         run: |
-          sudo apt-get update
-          sudo apt-get install jq
+          ls -larth
+        # - name: Install jq tool
+        # run: |
+        #   sudo apt-get update
+        #   sudo apt-get install  curl jq  vboot-utils u-boot-tools vbutil_kernel cgpt mkimage build-essential -y

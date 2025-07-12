@@ -1,7 +1,7 @@
 #!/bin/bash
 export ARCH=arm64
-export CROSS_COMPILE=aarch64-linux-gnu-
-QEMU=$(which qemu-aarch64-static)
+#export CROSS_COMPILE=aarch64-linux-gnu-
+#QEMU=$(which qemu-aarch64-static)
 ROOT=$(dirname $(dirname $(realpath $0)))/duet-linux
 DEVICE=$1
 case $2 in
@@ -188,7 +188,7 @@ case $3 in
 		fi
 		cd $ROOT/builds/linux
 		make INSTALL_MOD_PATH=/mnt modules_install
-		cp $QEMU /mnt
+		#cp $QEMU /mnt
 		sed -i 's/root\:\*/root\:\$6\$I9Q9AyTL\$Z76H7wD8mT9JAyrp\/vaYyFwyA5wRVN0tze8pvM\.MqScC7BBm2PU7pLL0h5nSxueqUpYAlZTox4Ag2Dp5vchjJ0/' /mnt/etc/shadow #this sets password as 'gentoo'
 		#cp /etc/resolv.conf /mnt/etc/resolv.conf
 		chroot /mnt apt update #needs binfmnt and qemu-utils, if it doesn't work just do it manually 
